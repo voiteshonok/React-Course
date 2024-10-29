@@ -1,0 +1,44 @@
+.card {
+    display: flex;
+    width: 580px;
+    height: 200px;
+    gap: 0px;
+    opacity: 0px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card__description__header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__img {
+    height: 120px;
+    width: 120px;
+}
+
+.card__description__header__title {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.6000000238418579px;
+    text-align: left;
+
+}
+
+.card__description__header__price {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}

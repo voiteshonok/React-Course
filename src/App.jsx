@@ -1,15 +1,20 @@
 import './App.css'
-import { Row } from './row/Row.jsx'
+import { Card } from './components/Card'
+
+import image from './assets/burger1.png'
+
+let card = {
+  'img': image,
+  'title': 'Burger dreams',
+  'price': '124$',
+  'descriprion': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+}
 
 function App() {
 
-  const rowData = ['Item 1', 'Item 2', 'Item 3'];
-
   return (
     <div>
-      <Row data={rowData} />
-      <Row data={['More', 'Data', 'Here']} />
-      <Row data={['More']} />
+      <Card img={card.img} title={card.title} price={card.price} descriprion={card.descriprion}/>
     </div>
   )
 }
