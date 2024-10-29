@@ -1,5 +1,5 @@
 import './App.css'
-import { Card } from './components/Card'
+import { Card, Header, BrowseMenu } from './components/index'
 
 import image from './assets/burger1.png'
 
@@ -14,6 +14,8 @@ function App() {
 
   return (
     <div>
+      <Header />
+      <BrowseMenu />
       <Card img={card.img} title={card.title} price={card.price} descriprion={card.descriprion}/>
     </div>
   )
