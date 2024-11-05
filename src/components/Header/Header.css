@@ -19,5 +19,20 @@
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    font: Inter;
+    font-weight: 400;
+    width: 100%;
+}
+
+.header__navigation {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header__menu {
+    color: #35B8BE;
 }
