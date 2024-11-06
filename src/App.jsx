@@ -1,5 +1,5 @@
 import './App.css'
-import { Card, Header, BrowseMenu } from './components/index'
+import { CardCollection, Header, BrowseMenu, Footer } from './components/index'
 
 import image from './assets/burger1.png'
 
@@ -7,8 +7,12 @@ let card = {
   'img': image,
   'title': 'Burger dreams',
   'price': '$ 124',
-  'descriprion': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  'descriprion': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  'id': '1'
 }
+
+let cardArray = [card, {...card, id: '2'}, {...card, id: '3'}, {...card, id: '4'}, {...card, id: '5'}, {...card, id: '6'}]
+
 
 function App() {
 
@@ -16,9 +20,8 @@ function App() {
     <div className='app'>
       <Header />
       <BrowseMenu />
-      <Card img={card.img} title={card.title} price={card.price} descriprion={card.descriprion}/>
-      <Card img={card.img} title={card.title} price={card.price} descriprion={card.descriprion}/>
-
+      <CardCollection cards={cardArray} />
+      <Footer />
     </div>
   )
 }

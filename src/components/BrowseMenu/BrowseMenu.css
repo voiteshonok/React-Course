@@ -1,4 +1,4 @@
-.BrowseMenu {
+.browseMenu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -6,7 +6,7 @@
     gap: 25px;
 }
 
-.BrowseMenu__title {
+.browseMenu__title {
     font-family: Inter;
     font-size: 50px;
     font-weight: 400;
@@ -16,7 +16,7 @@
     color: #35B8BE;
 }
 
-.BrowseMenu__text {
+.browseMenu__text {
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -25,17 +25,16 @@
     text-align: center;
 }
 
-.BrowseMenu__buttons {
+.browseMenu__buttons {
     display: flex;
     justify-content: space-around;
     height: 50px;
 }
 
-.BrowseMenu_buttons-desert {
+.browseMenu_buttons-desert {
     background: #35B8BE;
     color: white;
-  }
-
+}
 
 .tooltip {
     position: relative;

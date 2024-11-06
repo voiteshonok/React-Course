@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.36000001430511475px;
+    text-align: left;
+    color: #546285;
+}
+
+.footer__about__company {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__about__template {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__about__flowbase {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__about {
+    display: flex;
+    gap: 30px;
+}

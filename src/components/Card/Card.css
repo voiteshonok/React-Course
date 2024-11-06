@@ -57,4 +57,10 @@
 .add__button {
     background: #35B8BE;
     color: white;
+    height: 50px;
+}
+
+.card__description__buttons {
+    display: flex;
+    gap: 10px;
 }

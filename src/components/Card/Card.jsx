@@ -12,7 +12,7 @@ export function Card(props) {
                 <div>{props.descriprion}</div>
 
                 <div className='card__description__buttons'>
-                    <input className='card__input' type="text" value='1' maxLength="2" size="1" />
+                    <input className='card__input' type="text" value='1' maxLength="2" size="1" readOnly />
                     <button className='add__button'>Add to cart</button>
                 </div> 
             </div>
