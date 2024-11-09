@@ -7,7 +7,7 @@ let card = {
   'img': image,
   'title': 'Burger dreams',
   'price': '$ 124',
-  'descriprion': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  'description': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   'id': '1'
 }
 
