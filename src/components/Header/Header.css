@@ -1,8 +1,6 @@
 .header__logo {
     width: 35.72px;
     height: 45.86px;
-    top: 2.13px;
-    left: 2.14px;
     gap: 0px;
     border: 5px 0px 0px 0px;
     opacity: 0px;
@@ -35,4 +33,22 @@
 
 .header__menu {
     color: #35B8BE;
+}
+
+.header__navigation__img-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.overlay-circle {
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    right: 45px; /* Distance from the right */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

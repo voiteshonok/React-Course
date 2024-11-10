@@ -29,6 +29,8 @@ class CardCollection extends Component {
     }
 
     render() {
+        const { incrementCounter } = this.props;
+
         const { cards, counter } = this.state;
         const visibleCards = cards.slice(0, counter);
 
@@ -42,6 +44,7 @@ class CardCollection extends Component {
                             img={card.img}
                             price={`$ ${card.price} USD`}
                             description={card.category}
+                            incrementCounter={incrementCounter}
                         />
                     ))}
                 </div>

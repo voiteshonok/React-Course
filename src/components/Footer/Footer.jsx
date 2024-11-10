@@ -22,10 +22,10 @@ class Footer extends Component {
                     </div>
                     <div className='footer__about__template'>
                         <div>TEMPLATE</div>
-                        <div>Style Guide</div>
-                        <div>Changelog</div>
-                        <div>Licence</div>
-                        <div>Webflow Uniwersity</div>
+                        <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Style Guide</a>
+                        <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Changelog</a>
+                        <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Licence</a>
+                        <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Webflow University</a>
                     </div>
                     <div className='footer__about__flowbase'>
                         <div>FLOWBASE</div>

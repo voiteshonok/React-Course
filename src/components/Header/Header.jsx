@@ -6,6 +6,8 @@ import cart from '../../assets/Cart.png';
 
 class Header extends Component {
     render() {
+        const { counter } = this.props;
+
         return (
             <div className='header'>
                 <img className='header__logo' src={logo} alt='logo' />
@@ -14,7 +16,10 @@ class Header extends Component {
                     <div className='header__menu'>Menu</div>
                     <div className='header__companies'>Company</div>
                     <div className='header__login'>Login</div>
-                    <img className='header__cart' src={cart} alt='cart' />
+                    <div className='header__navigation__img-container'>
+                        <img className='header__cart' src={cart} alt='cart' />
+                        <div className="overlay-circle">{counter}</div> 
+                    </div>
                 </div>
             </div>
         );
