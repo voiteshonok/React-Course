@@ -1,0 +1,64 @@
+.browseMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 670px;
+    gap: 25px;
+}
+
+.browseMenu__title {
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 1.649999976158142px;
+    text-align: center;
+    color: #35B8BE;
+}
+
+.browseMenu__text {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.36000001430511475px;
+    text-align: center;
+}
+
+.browseMenu__buttons {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+
+.browseMenu_buttons-desert {
+    background: #35B8BE;
+    color: white;
+}
+
+.tooltip {
+    position: relative;
+    /*display: inline-block; not necessary*/
+    border-bottom: 1px dotted black;
+    color: blue;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility  : visible;
+}

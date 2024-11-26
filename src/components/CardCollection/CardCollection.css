@@ -1,0 +1,19 @@
+.cardCollection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.mainMenu__more {
+    background: #35B8BE;
+    color: white;
+    width: 150px;
+    height: 60px;
+}
+
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
