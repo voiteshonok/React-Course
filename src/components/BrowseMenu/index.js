@@ -1,1 +1,1 @@
-export * from "./BrowseMenu"
+export { default as BrowseMenu } from './BrowseMenu';

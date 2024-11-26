@@ -34,3 +34,13 @@
     display: flex;
     gap: 30px;
 }
+
+.footer__about__template a {
+    color: inherit;             /* Inherit color from parent, or set your desired color */
+    text-decoration: none;      /* Remove underline */
+    font-weight: normal;        /* Adjust weight if necessary */
+}
+
+.footer__about__template a:hover {
+    text-decoration: underline; /* Optional: Add underline or another style on hover */
+}
