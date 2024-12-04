@@ -3,17 +3,22 @@ import './App.css';
 import { CardCollection, Header, BrowseMenu, Footer } from './components/index';
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
+  const [cartCounter, setCounter] = useState(0);
+  const [category, setCategory] = useState("Dessert");
 
   const incrementCounter = (addCounterValue) => {
     setCounter((prevCounter) => prevCounter + addCounterValue);
   };
 
+  const changeCategory = (newCategory) => {
+    setCategory(newCategory);
+  }
+
   return (
     <div className='app'>
-      <Header counter={counter} />
-      <BrowseMenu />
-      <CardCollection counter={counter} incrementCounter={incrementCounter} />
+      <Header counter={cartCounter} />
+      <BrowseMenu changeCategory={changeCategory} />
+      <CardCollection incrementCounter={incrementCounter} category={category}/>
       <Footer />
     </div>
   );

@@ -3,7 +3,7 @@ import './CardCollection.css';
 
 import { Card } from '../index';
 
-const CardCollection = ({ incrementCounter }) => {
+const CardCollection = ({ incrementCounter, category }) => {
     const [cards, setCards] = useState([]);
     const [counter, setCounter] = useState(6);
 
@@ -12,18 +12,20 @@ const CardCollection = ({ incrementCounter }) => {
             .then((response) => response.json())
             .then((data) => setCards(data))
             .catch((error) => console.error('Error fetching data:', error));
-    }, []); // Empty dependency array ensures the effect runs only once when the component mounts.
+    }, []);
 
     const handleSeeMore = () => {
         setCounter((prevCounter) => prevCounter + 6);
     };
 
-    const visibleCards = cards.slice(0, counter);
+    const visibleCards = cards.filter((card) => card.category === category).slice(0, counter);
 
     return (
         <div className='mainMenu'>
             <div className='cardCollection'>
-                {visibleCards.map((card) => (
+                {visibleCards
+                .filter((card) => card.category === category)
+                .map((card) => (
                     <Card
                         key={card.id}
                         title={card.meal}
