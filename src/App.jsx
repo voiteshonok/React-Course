@@ -1,34 +1,22 @@
-import React, { Component } from 'react';
-import './App.css'
-import { CardCollection, Header, BrowseMenu, Footer } from './components/index'
+import React, { useState } from 'react';
+import './App.css';
+import { CardCollection, Header, BrowseMenu, Footer } from './components/index';
 
+const App = () => {
+  const [counter, setCounter] = useState(0);
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        counter: 0,
-    };
-  }
+  const incrementCounter = (addCounterValue) => {
+    setCounter((prevCounter) => prevCounter + addCounterValue);
+  };
 
-  incrementCounter = (addCounterValue) => {
-    this.setState((prevState) => ({
-        counter: prevState.counter + addCounterValue,
-    }));
-  }
+  return (
+    <div className='app'>
+      <Header counter={counter} />
+      <BrowseMenu />
+      <CardCollection counter={counter} incrementCounter={incrementCounter} />
+      <Footer />
+    </div>
+  );
+};
 
-  render() {
-    const { counter } = this.state;
-
-    return (
-        <div className='app'>
-            <Header counter={counter} />
-            <BrowseMenu />
-            <CardCollection counter={counter} incrementCounter={this.incrementCounter} />
-            <Footer />
-        </div>
-    );
-  }
-}
-
-export default App
+export default App;
