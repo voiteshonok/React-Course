@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { CardCollection, Header, BrowseMenu, Footer } from './components/index';
+import { CardCollection, Header, BrowseMenu, Footer, HomeCard } from './components/index';
 
 const App = () => {
   const [cartCounter, setCounter] = useState(0);
@@ -17,8 +17,9 @@ const App = () => {
   return (
     <div className='app'>
       <Header counter={cartCounter} />
-      <BrowseMenu changeCategory={changeCategory} />
-      <CardCollection incrementCounter={incrementCounter} category={category}/>
+      <HomeCard />
+      {/* <BrowseMenu changeCategory={changeCategory} />
+      <CardCollection incrementCounter={incrementCounter} category={category}/> */}
       <Footer />
     </div>
   );
