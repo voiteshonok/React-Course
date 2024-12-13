@@ -31,7 +31,22 @@
     height: 50px;
 }
 
-.browseMenu_buttons-desert {
+
+.browseMenu_buttons-desert,
+.browseMenu_buttons-dinner,
+.browseMenu_buttons-breakfast {
+    background: white;
+    color: black;
+    border: 1px solid #35B8BE;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.browseMenu_buttons-desert.active,
+.browseMenu_buttons-dinner.active,
+.browseMenu_buttons-breakfast.active {
     background: #35B8BE;
     color: white;
 }
