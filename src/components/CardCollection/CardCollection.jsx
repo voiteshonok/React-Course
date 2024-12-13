@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './CardCollection.css';
 
+import useFetch from '../../useFetch'
+
 import { Card } from '../index';
 
 const CardCollection = ({ incrementCounter, category }) => {
-    const [cards, setCards] = useState([]);
+    const { data: cards, error, loading } = useFetch('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');
+
     const [counter, setCounter] = useState(6);
 
-    useEffect(() => {
-        fetch('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals')
-            .then((response) => response.json())
-            .then((data) => setCards(data))
-            .catch((error) => console.error('Error fetching data:', error));
-    }, []);
 
     const handleSeeMore = () => {
         setCounter((prevCounter) => prevCounter + 6);
     };
 
-    const visibleCards = cards.filter((card) => card.category === category).slice(0, counter);
+    const visibleCards = (cards || []).filter((card) => card.category === category).slice(0, counter);
 
     return (
         <div className='mainMenu'>

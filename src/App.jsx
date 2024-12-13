@@ -18,8 +18,8 @@ const App = () => {
     <div className='app'>
       <Header counter={cartCounter} />
       <HomeCard />
-      {/* <BrowseMenu changeCategory={changeCategory} />
-      <CardCollection incrementCounter={incrementCounter} category={category}/> */}
+      <BrowseMenu changeCategory={changeCategory} />
+      <CardCollection incrementCounter={incrementCounter} category={category}/>
       <Footer />
     </div>
   );
