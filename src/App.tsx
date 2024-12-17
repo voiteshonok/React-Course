@@ -18,21 +18,21 @@ const App = () => {
     }
   }, []);
 
-  const incrementCounter = (addCounterValue) => {
+  const incrementCounter = (addCounterValue: number) => {
     setCounter((prevCounter) => prevCounter + addCounterValue);
   };
 
-  const changeCategory = (newCategory) => {
+  const changeCategory = (newCategory: string) => {
     setCategory(newCategory);
   }
 
   return (
     <div className='app'>
       <Header counter={cartCounter} />
-      {/* <HomeCard /> */}
+      <HomeCard />
       <Login />
-      {/* <BrowseMenu changeCategory={changeCategory} />
-      <CardCollection incrementCounter={incrementCounter} category={category}/> */}
+      <BrowseMenu changeCategory={changeCategory} />
+      <CardCollection incrementCounter={incrementCounter} category={category}/>
       <Footer />
     </div>
   );

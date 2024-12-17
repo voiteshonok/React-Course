@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import './Card.css';
 
-const Card = ({ img, title, price, description, incrementCounter }) => {
+interface CardProps {
+    img: string;
+    title: string;
+    price: string;
+    description: string;
+    incrementCounter: (inputValue: number) => void;
+}
+
+const Card: React.FC<CardProps> = ({ img, title, price, description, incrementCounter }) => {
     const [inputValue, setInputValue] = useState(1);
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10) || 0;
         setInputValue(value);
     };
@@ -27,9 +35,9 @@ const Card = ({ img, title, price, description, incrementCounter }) => {
                     <input
                         className='card__input'
                         type='text'
-                        value={inputValue}
-                        maxLength='2'
-                        size='1'
+                        value={inputValue.toString()}
+                        maxLength={2}
+                        size={1}
                         onChange={handleInputChange}
                     />
                     <button className='add__button' onClick={handleAddToCart}>

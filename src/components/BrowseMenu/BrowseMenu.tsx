@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import './BrowseMenu.css';
 
-const BrowseMenu = ({ changeCategory }) => {
+interface BrowseMenuProps {
+    changeCategory: (category: string) => void;
+  }
+
+const BrowseMenu: React.FC<BrowseMenuProps> = ({ changeCategory }) => {
     const [selectedCategory, setSelectedCategory] = useState('Dessert');
 
-    const handleCategoryChange = (category) => {
+    const handleCategoryChange = (category: string) => {
         setSelectedCategory(category);
         changeCategory(category);
     };
