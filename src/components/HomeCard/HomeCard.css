@@ -1,0 +1,67 @@
+.homeCard {
+    display: flex;
+    margin-top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.homeCard__content-title {
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 1.7999999523162842px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.homeCard__content-text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.12px;
+    letter-spacing: 0.36000001430511475px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homeCard__img{
+    width: 600px;
+    height: 580px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.homeCard__content-button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background: #35B8BE;
+    color: white;
+    border: 1px solid #35B8BE;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.homeCard__content-trustpilot {
+    margin-top: 200px;
+    margin-bottom: 10px;
+}
+
+
+.homeCard__content-stars {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
