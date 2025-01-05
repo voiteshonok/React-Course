@@ -13,7 +13,7 @@ interface CardCollectionProps {
 const CardCollection: React.FC<CardCollectionProps> = ({ incrementCounter, category }) => {
     const { data: cards, error, loading } = useFetch<CardType[]>('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');
 
-    const [counter, setCounter] = useState(6);
+    const [counter, setCounter] = useState<number>(6);
 
 
     const handleSeeMore = () => {

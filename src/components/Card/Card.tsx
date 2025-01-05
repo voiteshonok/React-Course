@@ -10,7 +10,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ img, title, price, description, incrementCounter }) => {
-    const [inputValue, setInputValue] = useState(1);
+    const [inputValue, setInputValue] = useState<number>(1);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value, 10) || 0;

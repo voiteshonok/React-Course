@@ -2,25 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import homepng from '../../assets/home.png';
 
-const HomeCard = () => {
-    return (
-        <CardContainer>
-            <Content>
-                <Title>
-                    Beautiful food & takeaway, delivered to your door.
-                </Title>
-                <Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
-                </Text>
-                <Button>Place an Order</Button>
-                <TrustPilot>TrustPilot</TrustPilot>
-                <Stars>4.8 out of 5 based on 2000+ reviews</Stars>
-            </Content>
-            <Image src={homepng} alt='' />
-        </CardContainer>
-    );
-};
-
 const CardContainer = styled.div`
     display: flex;
     margin: 100px 200px;
@@ -80,5 +61,25 @@ const Image = styled.img`
     width: 600px;
     height: 580px;
 `;
+
+const HomeCard = () => {
+    return (
+        <CardContainer>
+            <Content>
+                <Title>
+                    Beautiful food & takeaway, delivered to your door.
+                </Title>
+                <Text>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
+                </Text>
+                <Button>Place an Order</Button>
+                <TrustPilot>TrustPilot</TrustPilot>
+                <Stars>4.8 out of 5 based on 2000+ reviews</Stars>
+            </Content>
+            <Image src={homepng} alt='' />
+        </CardContainer>
+    );
+};
+
 
 export default HomeCard;
