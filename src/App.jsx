@@ -29,10 +29,10 @@ const App = () => {
   return (
     <div className='app'>
       <Header counter={cartCounter} />
-      {/* <HomeCard /> */}
+      <HomeCard />
       <Login />
-      {/* <BrowseMenu changeCategory={changeCategory} />
-      <CardCollection incrementCounter={incrementCounter} category={category}/> */}
+      <BrowseMenu changeCategory={changeCategory} selectedCategory={category}/>
+      <CardCollection incrementCounter={incrementCounter} category={category}/>
       <Footer />
     </div>
   );
