@@ -1,0 +1,56 @@
+.login-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-error {
+    color: red;
+}
+
+.button-group {
+    margin-bottom: 15px;
+}
+
+.cancel-button {
+    margin-left: 10px;
+}
+
+.input-label {
+    padding-right: 10px;
+}
+
+.login-container input {
+    height: 45px;
+    width: 430px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    font: Inter;
+}
+
+.login-container-heading {
+    color: #35B8BE;
+    font-family: Inter;  
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 1.649999976158142px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.login-container button {
+    width: 150px;
+    height: 50px;
+}
+
+.button-group-submit {
+    background: #35B8BE;
+    color: white;
+}
