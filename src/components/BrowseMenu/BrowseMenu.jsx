@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import './BrowseMenu.css';
 
-const BrowseMenu = ({ changeCategory }) => {
-    const [selectedCategory, setSelectedCategory] = useState('Dessert');
+const BrowseMenu = ({ changeCategory, selectedCategory}) => {
 
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-        changeCategory(category);
-    };
+    const categories = ['Dessert', 'Dinner', 'Breakfast']
 
     return (
         <div className='browseMenu'>
@@ -20,27 +16,16 @@ const BrowseMenu = ({ changeCategory }) => {
                 our store to place a pickup order. Fast and fresh food.
             </div>
             <div className='browseMenu__buttons'>
-            <button 
-                    className={`browseMenu_buttons-desert ${selectedCategory === 'Dessert' ? 'active' : ''}`}
-                    type="button" 
-                    onClick={() => handleCategoryChange('Dessert')}
+            {categories.map((category) => (
+                <button
+                    key={category}
+                    className={`browseMenu_buttons-${category.toLowerCase()} ${selectedCategory === category ? 'active' : ''}`}
+                    type="button"
+                    onClick={() => changeCategory(category)}
                 >
-                    Dessert
+                    {category}
                 </button>
-                <button 
-                    className={`browseMenu_buttons-dinner ${selectedCategory === 'Dinner' ? 'active' : ''}`}
-                    type="button" 
-                    onClick={() => handleCategoryChange('Dinner')}
-                >
-                    Dinner
-                </button>
-                <button 
-                    className={`browseMenu_buttons-breakfast ${selectedCategory === 'Breakfast' ? 'active' : ''}`}
-                    type="button" 
-                    onClick={() => handleCategoryChange('Breakfast')}
-                >
-                    Breakfast
-                </button>
+                ))}
             </div>
         </div>
     );

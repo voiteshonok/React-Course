@@ -18,7 +18,7 @@ const App = () => {
     <div className='app'>
       <Header counter={cartCounter} />
       <HomeCard />
-      <BrowseMenu changeCategory={changeCategory} />
+      <BrowseMenu changeCategory={changeCategory} selectedCategory={category}/>
       <CardCollection incrementCounter={incrementCounter} category={category}/>
       <Footer />
     </div>
