@@ -3,8 +3,8 @@ import './App.css';
 import { CardCollection, Header, BrowseMenu, Footer, HomeCard, Login } from './components/index';
 
 const App = () => {
-  const [cartCounter, setCounter] = useState(0);
-  const [category, setCategory] = useState("Dessert");
+  const [cartCounter, setCounter] = useState<number>(0);
+  const [category, setCategory] = useState<string>("Dessert");
 
   useEffect(() => {
     const storedUsers = localStorage.getItem('users');
@@ -18,11 +18,11 @@ const App = () => {
     }
   }, []);
 
-  const incrementCounter = (addCounterValue) => {
+  const incrementCounter = (addCounterValue: number) => {
     setCounter((prevCounter) => prevCounter + addCounterValue);
   };
 
-  const changeCategory = (newCategory) => {
+  const changeCategory = (newCategory: string) => {
     setCategory(newCategory);
   }
 

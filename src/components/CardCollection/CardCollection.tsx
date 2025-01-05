@@ -5,17 +5,22 @@ import useFetch from '../../useFetch'
 
 import { Card } from '../index';
 
-const CardCollection = ({ incrementCounter, category }) => {
-    const { data: cards, error, loading } = useFetch('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');
+interface CardCollectionProps {
+    category: string;
+    incrementCounter: (inputValue: number) => void;
+}
 
-    const [counter, setCounter] = useState(6);
+const CardCollection: React.FC<CardCollectionProps> = ({ incrementCounter, category }) => {
+    const { data: cards, error, loading } = useFetch<CardType[]>('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');
+
+    const [counter, setCounter] = useState<number>(6);
 
 
     const handleSeeMore = () => {
         setCounter((prevCounter) => prevCounter + 6);
     };
 
-    const visibleCards = (cards || []).filter((card) => card.category === category).slice(0, counter);
+    const visibleCards: CardType[] = (cards || []).filter((card) => card.category === category).slice(0, counter);
 
     return (
         <div className='mainMenu'>

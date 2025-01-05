@@ -1,7 +1,18 @@
 import React, { useState } from 'react';
 import './BrowseMenu.css';
 
-const BrowseMenu = ({ changeCategory, selectedCategory}) => {
+interface BrowseMenuProps {
+    changeCategory: (category: string) => void;
+    selectedCategory: string;
+  }
+
+const BrowseMenu: React.FC<BrowseMenuProps> = ({ changeCategory }) => {
+    const [selectedCategory, setSelectedCategory] = useState<string>('Dessert');
+
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategory(category);
+        changeCategory(category);
+    };
 
     const categories = ['Dessert', 'Dinner', 'Breakfast']
 
@@ -21,7 +32,7 @@ const BrowseMenu = ({ changeCategory, selectedCategory}) => {
                     key={category}
                     className={`browseMenu_buttons-${category.toLowerCase()} ${selectedCategory === category ? 'active' : ''}`}
                     type="button"
-                    onClick={() => changeCategory(category)}
+                    onClick={() => handleCategoryChange(category)}
                 >
                     {category}
                 </button>

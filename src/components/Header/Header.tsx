@@ -4,7 +4,11 @@ import './Header.css';
 import logo from '../../assets/Logo.png';
 import cart from '../../assets/Cart.png';
 
-const Header = ({ counter }) => {
+interface HeaderProps {
+    counter: number;
+}
+
+const Header: React.FC<HeaderProps> = ({ counter }) => {
     return (
         <div className='header'>
             <img className='header__logo' src={logo} alt='logo' />

@@ -15,7 +15,7 @@ const Login = () => {
     }
   }, [])
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -44,12 +44,12 @@ const Login = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (validateForm()) {
       const userExists = users.some(
-        (user) => user.username === formData.username && user.password === formData.password
+        (user: User) => user.username === formData.username && user.password === formData.password
       );
 
       if (userExists) {

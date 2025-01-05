@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-const useFetch = (url) => {
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
+const useFetch = <T=unknown>(url: string) => {
+    const [data, setData] = useState<T | null>(null);
+    const [error, setError] = useState<Error | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,7 +25,7 @@ const useFetch = (url) => {
                 const result = await response.json();
                 setData(result);
             } catch (err) {
-                setError(err);
+                setError(err as Error);
             } finally {
                 setLoading(false);
             }
