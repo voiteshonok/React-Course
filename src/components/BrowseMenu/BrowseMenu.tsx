@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { changeCategory } from '../../actions/category';
+import { RootState } from '../../store';
 import './BrowseMenu.css';
 
-interface BrowseMenuProps {
-    changeCategory: (category: string) => void;
-    selectedCategory: string;
-  }
 
-const BrowseMenu: React.FC<BrowseMenuProps> = ({ changeCategory }) => {
-    const [selectedCategory, setSelectedCategory] = useState<string>('Dessert');
+const BrowseMenu: React.FC = () => {
+    const selectedCategory = useSelector((state: RootState) => state.category);
+    const dispatch = useDispatch();
 
     const handleCategoryChange = (category: string) => {
-        setSelectedCategory(category);
-        changeCategory(category);
+        dispatch(changeCategory(category));
     };
 
     const categories = ['Dessert', 'Dinner', 'Breakfast']

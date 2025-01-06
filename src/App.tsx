@@ -41,8 +41,8 @@ const App = () => {
       <Header counter={cartCounter} />
       <HomeCard />
       <Login />
-      <BrowseMenu changeCategory={changeCategoryHandler} selectedCategory={category}/>
-      <CardCollection incrementCounter={incrementCounter} category={category}/>
+      <BrowseMenu />
+      <CardCollection incrementCounter={incrementCounter}/>
       <Footer />
     </div>
   );
