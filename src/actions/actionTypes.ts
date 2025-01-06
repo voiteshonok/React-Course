@@ -1,0 +1,3 @@
+export const INCREMENT_CART = 'INCREMENT_CART';
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
+
