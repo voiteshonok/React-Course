@@ -8,8 +8,6 @@ import { CardCollection, Header, BrowseMenu, Footer, HomeCard, Login } from './c
 import { RootState } from './store';
 
 const App = () => {
-  // const [cartCounter, setCounter] = useState<number>(0);
-  // const [category, setCategory] = useState<string>("Dessert");
   const cartCounter = useSelector((state: RootState) => state.cartCounter);
   const category = useSelector((state: RootState) => state.category);
   const dispatch = useDispatch();
@@ -27,14 +25,8 @@ const App = () => {
   }, []);
 
   const incrementCounter = (addCounterValue: number) => {
-    // setCounter((prevCounter) => prevCounter + addCounterValue);
     dispatch(incrementCart(addCounterValue));
   };
-
-  const changeCategoryHandler = (newCategory: string) => {
-    // setCategory(newCategory);
-    dispatch(changeCategory(newCategory));
-  }
 
   return (
     <div className='app'>
