@@ -4,14 +4,16 @@ import './CardCollection.css';
 import useFetch from '../../useFetch'
 
 import { Card } from '../index';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store';
 
 interface CardCollectionProps {
-    category: string;
     incrementCounter: (inputValue: number) => void;
 }
 
-const CardCollection: React.FC<CardCollectionProps> = ({ incrementCounter, category }) => {
+const CardCollection: React.FC<CardCollectionProps> = ({ incrementCounter }) => {
     const { data: cards, error, loading } = useFetch<CardType[]>('https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals');
+    const category = useSelector((state: RootState) => state.category);
 
     const [counter, setCounter] = useState<number>(6);
 
